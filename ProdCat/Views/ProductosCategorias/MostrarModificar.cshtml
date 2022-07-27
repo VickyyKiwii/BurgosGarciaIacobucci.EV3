@@ -1,0 +1,33 @@
+﻿@model ProdCat.Models.CategoriaProducto
+@{
+    ViewBag.Title = "MostrarModificar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //List<ProdCat.Models.CategoriaProducto> categorias;
+
+    //categorias = ViewBag.Categorias;
+}
+
+<h2>MostrarModificar Categorias</h2>
+
+<br />
+
+<div class="row">
+    <div class="col-lg-6">
+        <form method="post" action="@Url.Action("GuardarModificar", "ProductosCategorias")">
+
+
+            <div class="form-group">
+                <label for="idCategoria">ID Categoria</label>
+                <input type="number" name="Id" class="form-control" value="@Model.Id" readonly />
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="Nombre" class="form-control" value="@Model.Nombre" />
+            </div>
+
+            <input type="submit" value="Guardar" class="btn btn-primary" />
+        </form>
+
+    </div>
+</div>
+
